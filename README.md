@@ -1,24 +1,25 @@
 # README
+How to setup Rails 7 Active Storage to Storj DCS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Video walk-through](https://youtube.com/live/a8SlyTuoIwI)
 
-Things you may want to cover:
+Here's a step by step summary
 
-* Ruby version
+```shell
+rails active_storage:install
+```
 
-* System dependencies
 
-* Configuration
+[Add AWS S3 SDK Gem](https://github.com/amozoss/active-storj/blob/main/Gemfile#L6)
 
-* Database creation
+[Add :storj to storage.yml](https://github.com/amozoss/active-storj/blob/main/config/storage.yml#L10-L16)
 
-* Database initialization
+[has_attached_image](https://github.com/amozoss/active-storj/blob/main/app/models/name.rb) 
 
-* How to run the test suite
+[Use :storj config](https://github.com/amozoss/active-storj/blob/main/config/environments/development.rb#L37)
 
-* Services (job queues, cache servers, search engines, etc.)
+[Update view](https://github.com/amozoss/active-storj/blob/main/app/views/names/_form.html.erb#L14-L21)
 
-* Deployment instructions
+[Pin ActiveStorage javascript](https://github.com/amozoss/active-storj/blob/main/config/importmap.rb#L7)
 
-* ...
+[Start javascript activeStorage](https://github.com/amozoss/active-storj/blob/main/app/javascript/controllers/application.js#L4-L5)
