@@ -1,9 +1,11 @@
-import { Application } from "@hotwired/stimulus"
+import { Application } from "@hotwired/stimulus";
+import * as ActiveStorage from "@rails/activestorage";
 
-const application = Application.start()
+const application = Application.start();
+ActiveStorage.start();
 
 // Configure Stimulus development experience
-application.debug = false
-window.Stimulus   = application
+application.debug = false;
+window.Stimulus = application;
 
-export { application }
+export { application };
